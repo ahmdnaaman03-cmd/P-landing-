@@ -1,64 +1,75 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PayDOD - تقليل المرتجعات وأتمتة المدفوعات لمتاجر Shopify</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PayDOD | Reducing Returns</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .font-en { font-family: 'Inter', sans-serif; }
+        .font-ar { font-family: 'Tajawal', sans-serif; }
+    </style>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="brand">
-                <span class="logo-text">PayDOD</span>
-                <span class="tagline">Reducing Returns</span>
-            </div>
-            <nav>
-                <a href="#features">المميزات</a>
-                <a href="#ecosystem">آلية العمل</a>
-                <a href="https://calendly.com" target="_blank" class="btn-nav">احجز عرضاً تجريبياً</a>
-            </nav>
+<body class="bg-[#030712] text-slate-200 font-en antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Minimal Header -->
+    <header class="w-full max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <img src="logo.png" alt="PayDOD Logo" class="w-10 h-10 rounded-xl object-contain bg-slate-900 border border-slate-800 p-1" onerror="this.style.display='none'">
+            <span class="text-xl font-semibold tracking-tight text-white">Pay<span class="text-blue-500">DOD</span></span>
         </div>
+        <button onclick="toggleLanguage()" id="lang-btn" class="px-3.5 py-1.5 text-xs font-medium rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 transition border border-slate-800">
+            العربية 🇸🇦
+        </button>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>من طلب واحد.. إلى جميع الأطرف</h1>
-            <p class="hero-subtitle">منظومة واحدة تربط العميل، التاجر، شركة الشحن، والمندوب. تخلص من مخاطر الكاش المباشر (COD) وسرّع دورة رأس المال دون الاستغناء عن خيار الدفع عند الاستلام.</p>
-            <div class="cta-buttons">
-                <a href="https://calendly.com" target="_blank" class="btn-primary">ابدأ الآن لتأمين محصلاتك</a>
-            </div>
-        </div>
-    </section>
+    <!-- Centered Minimal Hero -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-16 text-center">
+        <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+            <span data-en="Zero Returns. Instant Doorstep Settlement." data-ar="بلا مرتجعات. تحصيل فوري عند الباب.">Zero Returns. Instant Doorstep Settlement.</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-400 font-light max-w-xl mx-auto mb-12 leading-relaxed" data-en="OrderPing WhatsApp pre-verification meets PayDOD dynamic QR doorstep payments. Built for modern e-commerce." data-ar="التحقق المسبق عبر واتساب مع الدفع الديناميكي بالـ QR عند باب العميل. مصممة للتجارة الإلكترونية الحديثة.">
+            OrderPing WhatsApp pre-verification meets PayDOD dynamic QR doorstep payments. Built for modern e-commerce.
+        </p>
 
-    <!-- Ecosystem Section -->
-    <section id="ecosystem" class="ecosystem">
-        <div class="container">
-            <h2>تكامل شامل لتقليل المرتجعات بنسبة 15% إلى 25%</h2>
-            <div class="features-grid">
-                <div class="card">
-                    <h3>Pay with</h3>
-                    <p>خيارات الدفع الإلكتروني الفوري المدمجة مع Stripe و Shopify لزيادة الثقة وتحصيل الأموال مسبقاً.</p>
-                </div>
-                <div class="card">
-                    <h3>Order pay</h3>
-                    <p>تحويل طلبات الدفع عند الاستلام إلى مسار رقمي مؤكد يضمن جدية العميل قبل خروج الشحنة.</p>
-                </div>
-                <div class="card">
-                    <h3>مراقبة التحصيلات الحية</h3>
-                    <p>لوحة تحكم مركزية لمتابعة حالات الدفع (Pending / Success) بدقة وتتبع الأرصدة لحظياً.</p>
-                </div>
-            </div>
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4">
+            <a href="https://calendly.com/orderping-demo/orderping-demo" target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-lg shadow-blue-600/20 text-center" data-en="Schedule Demo" data-ar="احجز موعد عرض">Schedule Demo</a>
+            <a href="https://wa.me/201066004512" target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-medium text-sm transition text-center" data-en="WhatsApp Us" data-ar="تواصل عبر واتساب">WhatsApp Us</a>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>paydod.online &copy; 2026. جميع الحقوق محفوظة.</p>
-        </div>
+    <!-- Minimal Footer -->
+    <footer class="w-full max-w-5xl mx-auto px-6 py-8 text-center text-xs text-slate-600 border-t border-slate-900">
+        &copy; 2026 PayDOD &bull; Ahmed Nouman
     </footer>
+
+    <!-- Language Toggle Script -->
+    <script>
+        let currentLang = 'en';
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            const root = document.getElementById('html-root');
+            const btn = document.getElementById('lang-btn');
+            
+            if (currentLang === 'ar') {
+                root.setAttribute('dir', 'rtl');
+                root.setAttribute('lang', 'ar');
+                document.body.classList.replace('font-en', 'font-ar');
+                btn.innerHTML = 'English 🇬🇧';
+            } else {
+                root.setAttribute('dir', 'ltr');
+                root.setAttribute('lang', 'en');
+                document.body.classList.replace('font-ar', 'font-en');
+                btn.innerHTML = 'العربية 🇸🇦';
+            }
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${currentLang}`);
+            });
+        }
+    </script>
 </body>
 </html>
